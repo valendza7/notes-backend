@@ -1,23 +1,20 @@
 {
-    "development": {
-      "username": "postgres",
-      "password": "asdfghjkl1234",
-      "database": "notes",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    },
-    "test": {
-      "username": "postgres",
-      "password": "asdfghjkl1234",
-      "database": "notes",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    },
-    "production": {
-      "username": "postgres",
-      "password": "asdfghjkl1234",
-      "database": "notes",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    }
+  "development": {
+    "username": "postgres",
+    "database": "notes",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "database": "notes",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "database": "notes",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   }
+}
