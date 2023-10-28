@@ -77,3 +77,24 @@ exports.edit = async (req, res, next) => {
 		})
 	}
 }
+
+exports.delete = async (req, res, next) => {
+	try {
+		let response
+		let insertdata = {
+			note_data: req.body.note_data
+		}
+		const note = await NotesModel.findOne({ where: { noteid: req.params.noteid} })
+		if(note.userid == req.user.userid){
+			const data = await NotesModel.destroy({where: { noteid: req.params.noteid}})
+			response = "Note Deleted"	
+		}
+		else response = "You can't delete someone else's note"
+		res.commonsuccess(response)
+	} catch (error) {
+		next({
+			source: "get", type: "error",
+			content: error
+		})
+	}
+}
